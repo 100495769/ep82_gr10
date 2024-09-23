@@ -2,9 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Russo+One&display=swap" rel="stylesheet">
     <title>Página 1</title>
+<style>
+
+    .column_text, .column_img {
+        width: 50%;
+        box-sizing: border-box;
+        padding-top: 10px;
+    }
+
+    .column_img {
+        float: left;
+        padding-left: 20px;
+    }
+    /* for the phone screen */
+    .column_text {
+        float: right;
+        padding-right: 60px;
+        margin: 0;
+    }
+
+    .textbox {
+        border: 3px dashed darkred;
+        background: indianred;
+        border-radius: 25px;
+        padding: 5px 30px;
+        color: navajowhite;
+        font-family: "Lucida Handwriting", cursive;
+    }
+
+    .headers {
+        font-family: "Russo One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 30px;
+        color: antiquewhite;
+        /*text-shadow: 2px 2px gray;*/
+        text-align: center;
+        padding-bottom: 30px;
+        padding-top: 30px;
+
+    }
+
+    .snow {
+        position: absolute;
+        top: -13px;
+        left: 2px;
+        width: 80%;
+        z-index: 10;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    @media only screen and (min-width: 600px) {
+        .column_img, .column_text {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+</style>
 </head>
-<body>
+<body style="background-color: #FFFFFF">
+
 <header><nav>
     <a href="home.html#Inicio">Inicio</a>
     <a href="home.html#PapaNoel">Papá Noel</a>
@@ -15,7 +81,7 @@
 
 </nav></header>
 <section id="Inicio">
-    <h1>Inicio</h1>
+    <div class="headers">Inicio</div>
     <p>
      La primera página tendrá un título en el centro de la página, un contador de los
 días que faltan al 24 de diciembre a las 23:59 (no funcional), y un botón
@@ -27,24 +93,37 @@ páginas del sitio web.
 </p>
 </section>
 <section id="PapaNoel">
-    <h1>Papa Noel</h1>
-    <img src="https://th.bing.com/th/id/OIP.x7B_SLuFHtHCW9BWhjQwiAHaHa?rs=1&pid=ImgDetMain" alt="Dibujo Hiperrealista de Papa Noel, es broma, es un gatito disfrazado de Papá Noel :D">
-    <p> La segunda página tendrá dos secciones. La primera sección contendrá el título
-de la página “Papá Noel”. La segunda sección se organizará en dos columnas.
-En la columna de la izquierda se pondrá una imagen o una galería de imágenes,
-mientras en la columna de la derecha se pondrá un texto. El tamaño dependerá
-de cada columna dependerá del contenido que se decide poner en cada parte
-    </p>
+    <div class="headers">Papa Noel</div>
+    <div class="row">
+        <div class="column_img">
+            <div style="position: relative;">
+                <img class="snow" src="../ep82_gr10/snow.png" alt="Snow Icon">
+                <img style="width: 80%; border: 3px dashed darkred;
+                 border-radius: 25px;" src="https://th.bing.com/th/id/OIP.x7B_SLuFHtHCW9BWhjQwiAHaHa?rs=1&pid=ImgDetMain" alt="Dibujo Hiperrealista de Papa Noel, es broma, es un gatito disfrazado de Papá Noel :D">
+            </div>
+        </div>
+        <div class="column_text">
+            <div class ="textbox">
+                <p style="margin:1px"> La segunda página tendrá dos secciones. La primera sección contendrá el título
+                    de la página “Papá Noel”. La segunda sección se organizará en dos columnas.
+                    En la columna de la izquierda se pondrá una imagen o una galería de imágenes,
+                    mientras en la columna de la derecha se pondrá un texto. El tamaño dependerá
+                    de cada columna dependerá del contenido que se decide poner en cada parte
+                </p>
+            </div>
+        </div>
+    </div>
+
 </section>
 <section id="LasCartas">
-    <h1>Las Cartas</h1>
+    <div class="headers">Las Cartas</div>
     La tercera página tendrá dos secciones. La primera sección contendrá el título
 de la página “Las cartas”. La segunda sección se organizará en seis cajas en dos
 filas (tres cajas por cada fila). Cada caja contendrá una de las cartas enviadas a
 Papá Noel con el texto, la foto de quién la envía, el nombre, la ciudad y el país.
 </section>
 <section id="EnviaTuCarta">
-    <h1>Envía Tu Carta</h1>
+    <div class="headers">Envía Tu Carta</div>
     <p>
     La cuarta página tendrás dos secciones. La primera sección contendrá el título
 de la página “Envía tu carta”. La segunda sección contendrá un formulario con
@@ -54,7 +133,7 @@ cuatro cajas de texto con etiquetas “nombre”, “correo electrónico”, “
     </p>
 </section>
 <section id="Juega">
-    <h1>Juega</h1>
+    <div class="headers">Juega</div>
     <p>
  La quinta página tendrá dos secciones. La primera sección contendrá el título
 de la página “¡Juega!”. La segunda sección se organizará en dos columnas. La
