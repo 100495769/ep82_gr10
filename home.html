@@ -5,7 +5,6 @@
     <link href="style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Russo+One&display=swap" rel="stylesheet">
     <title>Todo sobre Papá Noel</title>
 </head>
 <body style="background-color: #FFFFFF">
@@ -16,20 +15,24 @@
     <a href="home.html#LasCartas">¡Las Cartas!</a>
     <a href="home.html#EnviaTuCarta">Envía tu Carta</a>
     <a href="home.html#Juega">Juega</a>
-
-
 </nav></header>
 <section id="Inicio">
-    <div class="headers">Inicio</div>
-    <p>
-     La primera página tendrá un título en el centro de la página, un contador de los
-días que faltan al 24 de diciembre a las 23:59 (no funcional), y un botón
-deshabilitado. En la parte superior habrá una barra de navegación contente un
-logo / nombre del sitio web, un menú con 4 opciones (una de ella en evidencia),
-un botón para iniciar sesión (no funcional) y un botón para registrarse (no
-funcional). Cada una de las 4 opciones del menú llevará a una de las cuatro
-páginas del sitio web.
-</p>
+    <h1 id="InicioTitulo">¿Cuánto queda?</h1>
+    <table id="InicioContador">
+        <tr id="InicioContadorArriba">
+            <td>121</td>
+            <td>21</td>
+            <td>12</td>
+            <td>34</td>
+        </tr>
+        <tr id="InicioContadorAbajo">
+            <td>DD</td>
+            <td>HH</td>
+            <td>MM</td>
+            <td>SS</td>
+        </tr>
+    </table>
+    <button id="InicioBoton">¡VAMOS!</button>
 </section>
 <section id="PapaNoel">
     <div class="headers">Papa Noel</div>
@@ -82,7 +85,8 @@ juego según la opción seleccionada en el menú. De momento, el juego será no
 funcional y se representará con una imagen.
 </p>
 </section>
-<footer>El pie de página contendrá enlaces de utilidad (política de privacidad, redes
+<footer>
+    <a href="https://es.vecteezy.com/fotos-gratis/fondo-de-navidad">Fondo De Navidad Fotos de Stock por Vecteezy</a>El pie de página contendrá enlaces de utilidad (política de privacidad, redes
 sociales, contacto, …).
 </footer>
 </body>

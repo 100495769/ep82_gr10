@@ -1,3 +1,23 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap');
+.mountains-of-christmas-regular {
+  font-family: "Mountains of Christmas", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mountains-of-christmas-bold {
+  font-family: "Mountains of Christmas", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 .column_text, .column_img {
     width: 50%;
     box-sizing: border-box;
@@ -51,7 +71,72 @@
     clear: both;
 }
 
-@media only screen and (min-width: 600px) {
+
+/* Inicio*/
+#Inicio {
+    font-family: "Calibri", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url('./1920-merry-christmas-background-with-copy-space.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: antiquewhite;
+
+}
+
+#InicioTitulo {
+    margin-top: 13vh;
+    font-size: 10vw;
+    text-shadow: goldenrod 10px 0 10px;
+    margin-bottom: 1vh;
+
+}
+#InicioContador {
+    color: goldenrod;
+    background-color: #760e0b;
+    border-collapse: collapse;
+    margin-top: 4vh;
+    margin-bottom: 5vh;
+    font-size: 7vw;
+    border-spacing: 0;
+}
+#InicioContador td{
+    margin: 0px;
+    border: 2px solid #570505;
+    text-align: center;
+    width:25%;
+}
+#InicioContadorArriba td{
+    border-bottom: none;
+}
+#InicioContadorAbajo td {
+    border-top: none;
+}
+@keyframes AnimacionInicioBoton {
+    from{background-color: antiquewhite}
+    to{background-color: goldenrod}
+    
+}
+#InicioBoton {
+    font-weight: 700;
+    border: 0px;
+    border-radius: 8px;
+    padding: 2vh 6vw;
+    background-color: antiquewhite;
+}
+#InicioBoton:hover {
+    margin: 0;
+    transform: scale(1.2);
+    background-color: goldenrod;
+    animation-name: AnimacionInicioBoton;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@media screen and (min-width: 600px) {
     .column_img, .column_text {
         width: 100%;
         padding: 10px;
