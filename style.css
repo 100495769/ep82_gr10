@@ -1,4 +1,13 @@
 /*Fonts*/
+@font-face {
+    font-family: fontHeader;
+    src: url("../ep82_gr10/Christmas.otf");
+}
+
+@font-face {
+    font-family: fontMainPage;
+    src: url("../ep82_gr10/MainChirstmas.otf");
+}
 @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap');
 .mountains-of-christmas-regular {
   font-family: "Mountains of Christmas", serif;
@@ -15,11 +24,10 @@
 .column_text, .column_img {
     width: 50%;
     box-sizing: border-box;
-    padding-top: 10px;
 }
 .column_img {
     float: left;
-    padding-left: 20px;
+    padding-left: 100px;
 }
 /* for the phone screen */
 .column_text {
@@ -29,30 +37,24 @@
 }
 .textbox {
     border: 3px dashed darkred;
-    background: indianred;
+    background: rgba(205, 92, 92, 0.8);
     border-radius: 25px;
     padding: 5px 30px;
     color: navajowhite;
     font-family: "Lucida Handwriting", cursive;
 }
 .headers {
-    font-family: "Russo One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 30px;
     color: antiquewhite;
     /*text-shadow: 2px 2px gray;*/
     text-align: center;
     padding-bottom: 30px;
     padding-top: 30px;
+    font-family: fontMainPage;
+    font-size: 100px;
 }
-.snow {
-    position: absolute;
-    top: -13px;
-    left: 2px;
-    width: 80%;
-    z-index: 10;
-}
+
 .row:after {
     content: "";
     display: table;
