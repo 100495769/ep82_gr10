@@ -1,27 +1,47 @@
 /*Fonts*/
 @font-face {
     font-family: fontHeader;
-    src: url("../ep82_gr10/Christmas.otf");
+    src: url("fonts/Christmas.otf");
+}
+
+@font-face {
+    font-family: fontText;
+    src: url("fonts/textStyle.otf");
 }
 
 @font-face {
     font-family: fontMainPage;
-    src: url("../ep82_gr10/MainChirstmas.otf");
-}
-@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap');
-.mountains-of-christmas-regular {
-  font-family: "Mountains of Christmas", serif;
-  font-weight: 400;
-  font-style: normal;
+    src: url("fonts/MainChirstmas.otf");
 }
 
-.mountains-of-christmas-bold {
-  font-family: "Mountains of Christmas", serif;
-  font-weight: 700;
-  font-style: normal;
+/* for the phone screen */
+.column_text {
+    float: right;
+    padding-right: 60px;
+    margin: 0;
+}
+
+/*Headers de las paginas*/
+.headers {
+    font-weight: 400;
+    font-style: normal;
+    color: #a83a3a;
+    /*text-shadow: 2px 2px gray;*/
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-family: fontMainPage;
+    font-size: 100px;
+}
+
+/*Papa Noel dos columnas*/
+#PapaNoel {
+    width: 100%;
+    height: 100vh;
 }
 
 .column_text, .column_img {
+    padding-top: 5vh;
     width: 50%;
     box-sizing: border-box;
 }
@@ -29,30 +49,35 @@
     float: left;
     padding-left: 100px;
 }
-/* for the phone screen */
-.column_text {
-    float: right;
-    padding-right: 60px;
-    margin: 0;
+
+/*Papa Noel linea*/
+.line {
+    border-bottom: 2px solid #a83a3a;
+    padding-top: 15px;
+    width: 65%;
 }
-.textbox {
-    border: 3px dashed darkred;
-    background: rgba(205, 92, 92, 0.8);
-    border-radius: 25px;
-    padding: 5px 30px;
-    color: navajowhite;
-    font-family: "Lucida Handwriting", cursive;
+
+/*Iconos*/
+.icons-grind {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 20px;
 }
-.headers {
-    font-weight: 400;
-    font-style: normal;
-    color: antiquewhite;
-    /*text-shadow: 2px 2px gray;*/
-    text-align: center;
-    padding-bottom: 30px;
+
+.icon {
+    width: 10%;
     padding-top: 30px;
-    font-family: fontMainPage;
-    font-size: 100px;
+}
+
+.icon-description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-desc-text {
+    padding-top: 30px;
 }
 
 .row:after {
@@ -69,13 +94,12 @@ html, body {
 
 /*Inicio*/
 #Inicio {
-    font-family: "Calibri", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-image: url('./1920-merry-christmas-background-with-copy-space.jpg');
+    background-image: url('photos/1920-merry-christmas-background-with-copy-space.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     color: #2b2d38;
@@ -106,7 +130,6 @@ html, body {
     border-radius: 10px;
     display: flex;
     text-decoration: none;
-    font-family: "Russo One", sans-serif;
     background-color: #2b2d38;
     color: #5e5f67;
     align-items: center;
@@ -139,6 +162,7 @@ html, body {
     font-size: 12vmin;
     border-spacing: 0;
     border-radius: 20px;
+    text-align: center;
 }
 #InicioContador tr td{
     padding: 0.5vh 1vw;
