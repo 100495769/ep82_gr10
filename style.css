@@ -1,0 +1,59 @@
+.column_text, .column_img {
+    width: 50%;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+.column_img {
+    float: left;
+    padding-left: 20px;
+}
+/* for the phone screen */
+.column_text {
+    float: right;
+    padding-right: 60px;
+    margin: 0;
+}
+
+.textbox {
+    border: 3px dashed darkred;
+    background: indianred;
+    border-radius: 25px;
+    padding: 5px 30px;
+    color: navajowhite;
+    font-family: "Lucida Handwriting", cursive;
+}
+
+.headers {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: antiquewhite;
+    /*text-shadow: 2px 2px gray;*/
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+}
+
+.snow {
+    position: absolute;
+    top: -13px;
+    left: 2px;
+    width: 80%;
+    z-index: 10;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media only screen and (min-width: 600px) {
+    .column_img, .column_text {
+        width: 100%;
+        padding: 10px;
+    }
+}
