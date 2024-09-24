@@ -64,8 +64,29 @@ html, body {
     padding: 0;
     height: 100%;
 }
+/*Barra Navegación deberia cambiar depende del dispositivo*/
+#Navegacion{
+    margin: 0;
+    color: orange;
+    width: 100%;
+    height: 9vh;
 
-/* Inicio*/
+}
+#Navegacion nav{
+    margin: 0;
+    height: 9vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: flex-end;
+}
+#Navegacion nav a{
+
+    padding: 3vh 10px;
+    background-color: #2b2d38;
+    color: #5e5f67;
+}
+/*Inicio*/
 #Inicio {
     font-family: "Calibri", sans-serif;
     display: flex;
@@ -76,55 +97,63 @@ html, body {
     background-image: url('./1920-merry-christmas-background-with-copy-space.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    color: antiquewhite;
+    color: #2b2d38;
 
 }
-
 #InicioTitulo {
-    margin-top: 13vh;
-    font-size: 10vw;
-    text-shadow: goldenrod 10px 0 10px;
+    margin-top: 13vmax;
+    font-size: 13vmin;
+    text-shadow: #5d5e66 10px 0 10px;
     margin-bottom: 1vh;
-
+}
+@keyframes AnimacionColor {
+    from{background-color: #c3b18a
+    }
+    to{background-color: goldenrod}
+}
+@keyframes AnimacionLetras {
+    from{color: #c1b089
+    }
+    to{color: goldenrod}
 }
 #InicioContador {
-    color: goldenrod;
-    background-color: #760e0b;
-    border-collapse: collapse;
-    margin-top: 4vh;
-    margin-bottom: 5vh;
-    font-size: 7vw;
+    color: #d9ae51;
+    background-color: #24262e;
+    border: 2px solid #4b4d59;
+    margin-top: 1vmin;
+    margin-bottom: 5vmin;
+    font-size: 12vmin;
     border-spacing: 0;
+    border-radius: 20px;
 }
-#InicioContador td{
-    margin: 0px;
-    border: 2px solid #570505;
+#InicioContador tr td{
+    padding: 0.5vh 1vw;
     text-align: center;
-    width:25%;
-}
-#InicioContadorArriba td{
-    border-bottom: none;
-}
-#InicioContadorAbajo td {
-    border-top: none;
-}
-@keyframes AnimacionInicioBoton {
-    from{background-color: antiquewhite}
-    to{background-color: goldenrod}
+    border-right: 3px dotted rgb(76, 78, 90);
+    animation-name: AnimacionLetras;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 
 }
+#InicioContadorUltimo{
+    border-right: none !important;
+}
+
 #InicioBoton {
+    color: #2b2d38;
+    font-size: 2.5vmin;
     font-weight: 700;
     border: 0px;
-    border-radius: 8px;
-    padding: 2vh 6vw;
-    background-color: antiquewhite;
+    border-radius: 12px;
+    padding: 2vmin 6vmin;
+    background-color: #c2b18b;
 }
 #InicioBoton:hover {
     margin: 0;
     transform: scale(1.2);
     background-color: goldenrod;
-    animation-name: AnimacionInicioBoton;
+    animation-name: AnimacionColor;
     animation-duration: 0.5s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
