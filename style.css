@@ -92,6 +92,51 @@ html, body {
     height: 100%;
 }
 
+/*Las Cartas*/
+#LasCartas {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
+
+.cartas-grind {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 20px;
+    grid-row-gap: 50px;
+    padding-left: 6%;
+    padding-right: 2%;
+}
+
+.carta {
+    width: 400px;
+    height: 250px;
+    border: 3px dashed darkred;
+    background: rgba(205, 92, 92, 0.8);
+    border-radius: 25px;
+    position: relative;
+}
+
+.carta-header{
+    text-align: left;
+    padding-left: 60px;
+    padding-top: 50px;
+    font-size: 30px;
+    font-family: fontHeader;
+}
+
+.carta-text {
+    padding-top: 40px;
+    padding-left: 60px;
+    white-space: pre-line;
+}
+
+.carta-photo {
+    width: 30%;
+    padding: 0;
+    overflow: visible;
+}
+
 /*Inicio*/
 #Inicio {
     display: flex;
