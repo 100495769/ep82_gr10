@@ -26,7 +26,6 @@
     font-weight: 400;
     font-style: normal;
     color: #a83a3a;
-    /*text-shadow: 2px 2px gray;*/
     text-align: center;
     padding-bottom: 30px;
     padding-top: 30px;
@@ -133,8 +132,17 @@ html, body {
 
 .carta-photo {
     width: 30%;
-    padding: 0;
-    overflow: visible;
+    border-radius: 10px;
+    object-fit: cover;
+    position: absolute; /*pq tenemos carta y su posición, y foto es su objeto*/
+    top: 50%;
+    right: 10%;
+    transform: translate(0%, -50%);
+}
+
+#EnviaTuCarta {
+    width: 100%;
+    height: 100vh;
 }
 
 /*Inicio*/
