@@ -84,11 +84,15 @@
     display: table;
     clear: both;
 }
-
+* {
+        cursor: url(./photos/png-clipart-open-snowman-graphics-pallet-snowman-faces-pinterest-face-hat.png) 12 6, auto;
+}
 html, body {
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     height: 100%;
+
 }
 
 /*Las Cartas*/
@@ -144,7 +148,6 @@ html, body {
     width: 100%;
     height: 100vh;
 }
-
 /*Inicio*/
 #Inicio {
     display: flex;
@@ -155,7 +158,7 @@ html, body {
     background-image: url('photos/1920-merry-christmas-background-with-copy-space.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    color: #2b2d38;
+    color: #c2b28c;
 
 }
 @keyframes AnimacionLetras {
@@ -171,21 +174,27 @@ html, body {
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    background-color: rgba(94, 95, 103, 0.63);
-    justify-content: flex-end;
+    background: linear-gradient(to bottom, rgb(50, 53, 61), rgb(50, 53, 61, 0));
+    justify-items: center;
 
 }
 
 #Navegacion a{
-    border: 2px solid #4c4f58;
-    margin: 2px 4px;
+    text-align: center;
+    flex-grow: 1;
+    font-family: fontMainPage;
+    font-size: 10vmin;
+    text-shadow: #383a43 10px 0 10px;
+    margin: 40px 4px;
     padding: 10px;
     border-radius: 10px;
     display: flex;
     text-decoration: none;
-    background-color: #2b2d38;
-    color: #5e5f67;
+    color: #c2b38d;
     align-items: center;
+    justify-content: center;
+    overflow-wrap: break-word;
+    wrap-option: no-wrap;
 }
 #Navegacion a:hover{
     animation-name: AnimacionLetras;
@@ -195,9 +204,10 @@ html, body {
 
 }
 #InicioTitulo {
-    margin-top: 13vmax;
-    font-size: 13vmin;
-    text-shadow: #5d5e66 10px 0 10px;
+    font-family: fontMainPage;
+    margin-top: 10vmax;
+    font-size: 20vmin;
+    text-shadow: #383a43 10px 0 10px;
     margin-bottom: 1vh;
 }
 @keyframes AnimacionColor {
@@ -248,4 +258,10 @@ html, body {
     animation-duration: 0.5s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
+}
+/*JUEGA*/
+
+#Juega {
+    height: 100vh;
+    width: 100%;
 }
