@@ -28,7 +28,7 @@
     color: #a83a3a;
     text-align: center;
     padding-bottom: 30px;
-    padding-top: 30px;
+    padding-top: 25px;
     font-family: fontMainPage;
     font-size: 100px;
 }
@@ -265,3 +265,30 @@ html, body {
     height: 100vh;
     width: 100%;
 }
+#Juega h1{
+    margin: 0;
+}
+#Juega div{
+    display: grid;
+    flex-direction: column;
+}
+#Juega div input{
+    width: 10%;
+}
+#Juega div img{
+    grid-column: 2;
+    width: 30%;
+    height: 30%;
+    display: none;
+}
+#LanzaNieves:checked ~ #LanzaNievesIMG {
+    display: block;
+}
+#CarreraDeTrineos:checked ~ #CarreraDeTrineosIMG {
+    display: block;
+}
+#ReparteRegalos:checked ~ #ReparteRegalosIMG {
+display: block;
+}
+
+
