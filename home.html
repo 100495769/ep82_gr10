@@ -109,13 +109,31 @@
 </section>
 <section id="EnviaTuCarta">
     <div class="headers">(Envía Tu Carta)</div>
-    <p>
-    La cuarta página tendrás dos secciones. La primera sección contendrá el título
-de la página “Envía tu carta”. La segunda sección contendrá un formulario con
-cuatro cajas de texto con etiquetas “nombre”, “correo electrónico”, “ciudad” y
-“país”, un área de texto con etiqueta “carta para Papá Noel”, y un botón
-“Envía” (no funcional).
-    </p>
+    <div class="forma">
+        <div class="forma-header">Envia tu carta aqui!</div>
+        <form action="/action_page.php">
+            <div class="forma-left">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Entre su nombre completo ...">
+                <label for="city">Ciudad</label>
+                <input type="text" id="city" name="city" placeholder="Entre su ciudad ...">
+            </div>
+            <div class="forma-right">
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email" placeholder="Entre su correo electronico ...">
+                <label for="country">País</label>
+                <input type="text" id="country" name="country" placeholder="Entre su país ...">
+            </div>
+            <div class="forma-middle">
+                <label for="carta">Carta para Papá Noel</label>
+                <input type="text" id="carta" name="carta" placeholder="Escriba una carta para Papá Noel...">
+            </div>
+            <div class="forma-submit">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
 </section>
 <section id="Juega">
     <h1 class="headers">(Juega)</h1>

@@ -44,6 +44,7 @@
     width: 50%;
     box-sizing: border-box;
 }
+
 .column_img {
     float: left;
     padding-left: 100px;
@@ -107,8 +108,8 @@ html, body {
     grid-template-columns: repeat(3, 1fr);
     padding-top: 2vh;
     grid-row-gap: 5vh;
-    padding-left: 6vw;
-    padding-right: 2vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 .carta {
@@ -175,12 +176,106 @@ html, body {
         width: 14vw;
         height: 14vw;
     }
+
+    .column_img {
+        float: left;
+        padding-left: 40px;
+        width: 50%;
+    }
 }
 
 #EnviaTuCarta {
     width: 100%;
-    height: 100vh;
+    height: auto;
 }
+
+.forma {
+    width: 90%;
+    height: 80%;
+    left: 5vw;
+    right: 5vw;
+    /*border: 0.4vmin solid darkred;*/
+    background: rgba(205, 92, 92, 0.5);
+    border-radius: 3vmin;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 4vw;
+    justify-content: flex-start;
+    overflow: auto;
+}
+
+.forma-left, .forma-right {
+    width: 45%;
+    box-sizing: border-box;
+    padding-bottom: 1vw;
+}
+
+.forma-right {
+    float: right;
+}
+
+.forma-left {
+    float: left;
+}
+
+.forma-middle {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.forma-middle input[type=text] {
+    height: 10vw;
+}
+
+.forma-header {
+    text-align: left;
+    font-size: 3vw;
+    font-family: fontHeader;
+    padding-bottom: 4vw;
+}
+
+.forma-text {
+    font-size: 1.5vw;
+    white-space: pre-line;
+}
+
+.forma-submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 1vw;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: rgba(205, 92, 92);
+    color: white;
+    padding: 1vw 5vw;
+    border: none;
+    border-radius: 4px;
+    font-family: fontHeader;
+    font-size: 2vw;
+
+}
+
+input[type=submit]:hover {
+    background-color: #e19c38;
+    border: 0.4vmin dashed rgb(194, 71, 71);
+}
+
 /*Inicio*/
 #Inicio {
     display: flex;
