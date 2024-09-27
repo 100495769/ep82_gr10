@@ -184,11 +184,13 @@ html, body {
     }
 }
 
+/*Envia Tu Carta*/
 #EnviaTuCarta {
     width: 100%;
     height: auto;
 }
 
+/*container for the form*/
 .forma {
     width: 90%;
     height: 80%;
@@ -206,6 +208,7 @@ html, body {
     overflow: auto;
 }
 
+/*split of the container into two parts*/
 .forma-left, .forma-right {
     width: 45%;
     box-sizing: border-box;
@@ -220,6 +223,7 @@ html, body {
     float: left;
 }
 
+/*the biggest field for the letter sending*/
 .forma-middle {
     width: 100%;
     box-sizing: border-box;
@@ -243,12 +247,14 @@ html, body {
     white-space: pre-line;
 }
 
+/*submit button position*/
 .forma-submit {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/*form input functionality*/
 input[type=text] {
     width: 100%;
     padding: 1vw;
@@ -260,6 +266,7 @@ input[type=text] {
     resize: vertical;
 }
 
+/*submit button functionality*/
 input[type=submit] {
     background-color: rgba(205, 92, 92);
     color: white;
@@ -271,6 +278,7 @@ input[type=submit] {
 
 }
 
+/*change of the color while clicking on submit button*/
 input[type=submit]:hover {
     background-color: #e19c38;
     border: 0.4vmin dashed rgb(194, 71, 71);
