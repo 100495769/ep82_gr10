@@ -184,13 +184,13 @@ html, body {
     flex-grow: 1;
     font-family: fontMainPage;
     font-size: 10vmin;
+    color: #c2b38d;
     text-shadow: #383a43 10px 0 10px;
     margin: 40px 4px;
     padding: 10px;
     border-radius: 10px;
     display: flex;
     text-decoration: none;
-    color: #c2b38d;
     align-items: center;
     justify-content: center;
     overflow-wrap: break-word;
@@ -269,26 +269,50 @@ html, body {
     margin: 0;
 }
 #Juega div{
-    display: grid;
+    border-bottom: 10vh;
+    display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    height: 70%;
+    width: auto;
 }
 #Juega div input{
-    width: 10%;
+    display: none;
+}
+@media (max-aspect-ratio: 6/5) {
+    #Juega div{
+        flex-direction: row;
+        height: 65%;
+        gap: 5% 0
+    }
+}
+#Juega div label{
+    font-family: fontMainPage;
+    text-wrap: wrap;
+    font-size: 10vmin;
+    color: #c2b38d;
+    display: flex;
+    flex: 0 0 33.3%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 #Juega div img{
     grid-column: 2;
-    width: 30%;
-    height: 30%;
+    grid-row: 1 / span 3;
+    width: auto;
+    height: 100%;
     display: none;
+    margin: auto;
 }
 #LanzaNieves:checked ~ #LanzaNievesIMG {
     display: block;
 }
 #CarreraDeTrineos:checked ~ #CarreraDeTrineosIMG {
-    display: block;
+    display: flex;
 }
 #ReparteRegalos:checked ~ #ReparteRegalosIMG {
-display: block;
+    display: flex;
 }
 
 
