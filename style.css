@@ -147,6 +147,36 @@ html, body {
     transform: translate(0%, -50%);
 }
 
+@media (max-width: 600px) {
+
+    #LasCartas {
+        align-content: center;
+        justify-content: center;
+    }
+
+    .cartas-grind {
+        grid-template-columns: 1fr;
+    }
+
+    .carta {
+        width: 100%;
+    }
+
+    .carta-text {
+        font-size: 3vw;
+    }
+
+    .carta-header {
+        font-size: 4vw;
+    }
+
+    .carta-photo {
+        top: 50%;
+        width: 14vw;
+        height: 14vw;
+    }
+}
+
 #EnviaTuCarta {
     width: 100%;
     height: 100vh;
