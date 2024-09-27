@@ -188,6 +188,7 @@ html, body {
 #EnviaTuCarta {
     width: 100%;
     height: auto;
+    min-height: 100vh;
 }
 
 /*container for the form*/
