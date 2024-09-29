@@ -587,13 +587,7 @@ input[type=submit]:hover {
 #Juega div input{
     display: none;
 }
-@media (max-aspect-ratio: 6/5) {
-    #Juega div{
-        flex-direction: row;
-        height: 65%;
-        gap: 5% 0
-    }
-}
+
 #Juega div label{
     font-family: fontMainPage, serif;
     text-wrap: wrap;
@@ -622,3 +616,21 @@ input[type=submit]:hover {
 #ReparteRegalos:checked ~ #ReparteRegalosIMG {
     display: flex;
 }
+@media (max-aspect-ratio: 11/10) {
+    #Juega div img{
+        width: 60vw;
+        height: 60vw;
+    }
+}
+
+@media (max-aspect-ratio: 6/8) {
+    #Juega div{
+        flex-direction: row;
+        gap: 5% 0;
+        img{
+            width: 100vw;
+            height: auto;
+        }
+    }
+}
+
