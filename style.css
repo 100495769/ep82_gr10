@@ -13,9 +13,21 @@
     font-family: fontMainPage;
     src: url("fonts/MainChirstmas.otf");
 }
+
+body {
+    background-color: #FFFFFF;
+    font-family: fontText,serif;
+    font-size: 20px;
+}
+
 /*margins for all the built-in headers*/
 h1, h2, h3, h4, h5, h6 {
     margin: 4vw;
+}
+
+input {
+    font-size: 1.5vw;
+    font-family: fontText,serif;
 }
 
 /* for the phone screen */
@@ -39,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 #PapaNoel {
     width: 100%;
     height: auto;
-    min-height: 90vh;
+    min-height: 70vh;
 }
 
 .column_text, .column_img {
@@ -50,6 +62,11 @@ h1, h2, h3, h4, h5, h6 {
 .column_img {
     float: left;
     padding-left: 100px;
+}
+
+.papa-image {
+    width: 70%;
+    padding-top: 5%;
 }
 
 /*Papa Noel linea*/
@@ -262,6 +279,44 @@ input[type=submit]:hover {
 /*breakpoint for devices less then 600px*/
 @media (max-width: 600px) {
 
+    #PapaNoel {
+        font-size: 3vw;
+    }
+
+    .line {
+        border-bottom: 1px solid #a83a3a;
+        padding-top: 15px;
+        width: 50%;
+    }
+
+    .papa-image {
+        width: 80%;
+        padding-top: 50%;
+    }
+
+    .icon {
+        width: 1.5rem;
+        height: auto;
+        vertical-align: middle;
+    }
+
+    .icon-description {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.7rem;
+    }
+
+    .icon-desc-text {
+        padding:0;
+        margin: 0;
+        font-size: 3vw;
+    }
+
+    /*quién es papa noel header*/
+    .papa-header {
+        font-size: 1.8rem;
+    }
     /*todas las cartas*/
     #LasCartas {
         align-content: center;
@@ -275,6 +330,7 @@ input[type=submit]:hover {
 
     .carta {
         width: 100%;
+        font-size: 3vw;
     }
 
     .carta-header, .forma-header, input[type=submit] {
@@ -304,6 +360,7 @@ input[type=submit]:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-size: 3vw;
     }
 
     .forma-header {
@@ -335,7 +392,7 @@ input[type=submit]:hover {
 
     .carta {
         width: 100%;
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
 
     .carta-header, .forma-header, input[type=submit] {
