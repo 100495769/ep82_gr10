@@ -13,6 +13,10 @@
     font-family: fontMainPage;
     src: url("fonts/MainChirstmas.otf");
 }
+/*margins for all the built-in headers*/
+h1, h2, h3, h4, h5, h6 {
+    margin: 4vw;
+}
 
 /* for the phone screen */
 .column_text {
@@ -27,20 +31,18 @@
     font-style: normal;
     color: #a83a3a;
     text-align: center;
-    padding-bottom: 30px;
-    padding-top: 25px;
-    font-family: fontMainPage;
-    font-size: 100px;
+    font-family: fontMainPage, serif;
+    font-size: 10vw;
 }
 
 /*Papa Noel dos columnas*/
 #PapaNoel {
     width: 100%;
-    height: 100vh;
+    height: auto;
+    min-height: 90vh;
 }
 
 .column_text, .column_img {
-    padding-top: 5vh;
     width: 50%;
     box-sizing: border-box;
 }
@@ -65,19 +67,31 @@
 }
 
 .icon {
-    width: 10%;
-    padding-top: 30px;
+    width: 2.5rem;
+    height: auto;
+    vertical-align: middle;
+    margin: 0;
+    padding-bottom: 20px;
 }
 
 .icon-description {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 1.5rem;
 }
 
 .icon-desc-text {
-    padding-top: 30px;
+    padding:0;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/*quién es papa noel header*/
+.papa-header {
+    font-size: 2rem;
+    font-family: fontHeader, serif;
+    margin:0;
 }
 
 .row:after {
@@ -98,7 +112,7 @@ html, body {
 /*Las Cartas*/
 #LasCartas {
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     height: auto;
     overflow: auto;
 }
@@ -106,7 +120,6 @@ html, body {
 .cartas-grind {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding-top: 2vh;
     grid-row-gap: 5vh;
     padding-left: 5vw;
     padding-right: 5vw;
@@ -128,12 +141,11 @@ html, body {
 
 .carta-header{
     text-align: left;
-    font-size: 3vw;
-    font-family: fontHeader;
+    font-size: 2.5vw;
+    font-family: fontHeader, serif;
 }
 
 .carta-text {
-    font-size: 1.5vw;
     white-space: pre-line;
 }
 
@@ -143,52 +155,16 @@ html, body {
     border-radius: 1vmin;
     object-fit: cover;
     position: absolute; /*pq tenemos carta y su posición, y foto es su objeto*/
-    top: 43%;
+    top: 40%;
     right: 2vw;
     transform: translate(0%, -50%);
-}
-
-@media (max-width: 600px) {
-
-    #LasCartas {
-        align-content: center;
-        justify-content: center;
-    }
-
-    .cartas-grind {
-        grid-template-columns: 1fr;
-    }
-
-    .carta {
-        width: 100%;
-    }
-
-    .carta-text {
-        font-size: 3vw;
-    }
-
-    .carta-header {
-        font-size: 4vw;
-    }
-
-    .carta-photo {
-        top: 50%;
-        width: 14vw;
-        height: 14vw;
-    }
-
-    .column_img {
-        float: left;
-        padding-left: 40px;
-        width: 50%;
-    }
 }
 
 /*Envia Tu Carta*/
 #EnviaTuCarta {
     width: 100%;
     height: auto;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 /*container for the form*/
@@ -197,7 +173,6 @@ html, body {
     height: 80%;
     left: 5vw;
     right: 5vw;
-    /*border: 0.4vmin solid darkred;*/
     background: rgba(205, 92, 92, 0.5);
     border-radius: 3vmin;
     position: relative;
@@ -224,7 +199,7 @@ html, body {
     float: left;
 }
 
-/*the biggest field for the letter sending*/
+/*the biggest field for the sending of a letter*/
 .forma-middle {
     width: 100%;
     box-sizing: border-box;
@@ -232,19 +207,19 @@ html, body {
     flex-direction: column;
 }
 
+/*size on a middle-input field*/
 .forma-middle input[type=text] {
     height: 10vw;
 }
 
 .forma-header {
     text-align: left;
-    font-size: 3vw;
-    font-family: fontHeader;
+    font-size: 2.5vw;
+    font-family: fontHeader, serif;
     padding-bottom: 4vw;
 }
 
 .forma-text {
-    font-size: 1.5vw;
     white-space: pre-line;
 }
 
@@ -274,15 +249,156 @@ input[type=submit] {
     padding: 1vw 5vw;
     border: none;
     border-radius: 4px;
-    font-family: fontHeader;
+    font-family: fontHeader, serif;
     font-size: 2vw;
-
 }
 
 /*change of the color while clicking on submit button*/
 input[type=submit]:hover {
     background-color: #e19c38;
     border: 0.4vmin dashed rgb(194, 71, 71);
+}
+
+/*breakpoint for devices less then 600px*/
+@media (max-width: 600px) {
+
+    /*todas las cartas*/
+    #LasCartas {
+        align-content: center;
+        justify-content: center;
+        min-height: 60vh;
+    }
+
+    .cartas-grind {
+        grid-template-columns: 1fr;
+    }
+
+    .carta {
+        width: 100%;
+    }
+
+    .carta-header, .forma-header, input[type=submit] {
+        font-size: 4vw;
+    }
+
+    .carta-photo {
+        top: 50%;
+        width: 14vw;
+        height: 14vw;
+    }
+
+    .column_img {
+        float: left;
+        padding-left: 40px;
+        width: 50%;
+    }
+
+    #EnviaTuCarta {
+        width: auto;
+        height: auto;
+        min-height: 40vh;
+    }
+
+    .forma {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .forma-header {
+        padding-bottom: 7vw;
+    }
+}
+
+/*breakpoint for the middle-scaled devices*/
+@media (min-width: 600px) and (max-width: 768px) {
+
+    #LasCartas {
+        height: auto;
+        min-height: 40vh;
+    }
+
+    #EnviaTuCarta {
+        width: auto;
+        height: auto;
+        min-height: 40vh;
+    }
+
+    .cartas-grind {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 2vh;
+        grid-row-gap: 2vh;
+        grid-column-gap: 2vh;
+    }
+
+    .carta {
+        width: 100%;
+        font-size: 2vw;
+    }
+
+    .carta-header, .forma-header, input[type=submit] {
+        font-size: 3vw;
+    }
+
+    .carta-photo {
+        top: 38%;
+        width: 9vw;
+        height: 9vw;
+        right: 2vw;
+    }
+
+    .column_img {
+        float: left;
+        padding-left: 40px;
+        width: 50%;
+    }
+}
+
+/*breakpoint for bigger screens, but not extremely big*/
+@media (min-width: 768px) and (max-width: 1150px) {
+
+    #LasCartas {
+        height: auto;
+        min-height: 40vh;
+    }
+
+    #EnviaTuCarta {
+        width: auto;
+        height: auto;
+        min-height: 40vh;
+    }
+
+    .cartas-grind {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 2vh;
+        grid-row-gap: 2vh;
+        grid-column-gap: 2vh;
+    }
+
+    .carta {
+        width: 100%;
+        font-size: 2vw;
+    }
+
+    .carta-header, .forma-header, input[type=submit] {
+        font-size: 3vw;
+    }
+
+    .carta-photo {
+        top: 43%;
+        width: 10vw;
+        height: 10vw;
+        right: 2vw;
+    }
+
+    .column_img {
+        float: left;
+        padding-left: 40px;
+        width: 50%;
+    }
 }
 
 /*Inicio*/
@@ -319,7 +435,7 @@ input[type=submit]:hover {
 #Navegacion a{
     text-align: center;
     flex-grow: 1;
-    font-family: fontMainPage;
+    font-family: fontMainPage, serif;
     font-size: 10vmin;
     color: #c2b38d;
     text-shadow: #383a43 10px 0 10px;
@@ -341,7 +457,7 @@ input[type=submit]:hover {
 
 }
 #InicioTitulo {
-    font-family: fontMainPage;
+    font-family: fontMainPage, serif;
     margin-top: 10vmax;
     font-size: 20vmin;
     text-shadow: #383a43 10px 0 10px;
@@ -382,7 +498,7 @@ input[type=submit]:hover {
     color: #2b2d38;
     font-size: 2.5vmin;
     font-weight: 700;
-    border: 0px;
+    border: 0;
     border-radius: 12px;
     padding: 2vmin 6vmin;
     background-color: #c2b18b;
@@ -402,9 +518,7 @@ input[type=submit]:hover {
     height: 100vh;
     width: 100%;
 }
-#Juega h1{
-    margin: 0;
-}
+
 #Juega div{
     border-bottom: 10vh;
     display: flex;
@@ -424,7 +538,7 @@ input[type=submit]:hover {
     }
 }
 #Juega div label{
-    font-family: fontMainPage;
+    font-family: fontMainPage, serif;
     text-wrap: wrap;
     font-size: 10vmin;
     color: #c2b38d;
@@ -451,5 +565,3 @@ input[type=submit]:hover {
 #ReparteRegalos:checked ~ #ReparteRegalosIMG {
     display: flex;
 }
-
-
