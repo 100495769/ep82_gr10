@@ -634,3 +634,40 @@ input[type=submit]:hover {
     }
 }
 
+footer{
+    img{
+        align-self: center;
+        width: 10vh;
+        height: auto;
+    }
+    a{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        text-decoration: none;
+        color: #f0f0f0;
+    }
+    a:hover{
+        background-color: rgb(230, 174, 173, 0.2);
+    }
+    .footerLink{
+        text-align: center;
+        width: auto;
+        padding: 1vh 2%;
+        font-size: 3.5vh;
+    }
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-items: center;
+    color: whitesmoke;
+    background: linear-gradient(to top, rgb(205, 92, 92), rgb(205, 92, 92, 8));
+}
+#footerImages{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
