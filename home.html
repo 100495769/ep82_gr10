@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
+    <link href="style_part2.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Todo sobre Papá Noel</title>
 </head>
 <body>
+
 <section id="Inicio">
 <nav id="Navegacion">
     <a href="home.html#Inicio">Inicio</a>
@@ -16,7 +18,23 @@
     <a href="home.html#LasCartas">¡Las Cartas!</a>
     <a href="home.html#EnviaTuCarta">Envía tu Carta</a>
     <a href="home.html#Juega">Juega</a>
+    <a onclick="openForm()">Cuenta</a>
 </nav>
+    <div class="popup-form" id="popupIniciar">
+        <form action="/action_page.php" class="form-container">
+            <div class="login-header">Login</div>
+
+            <label for="username" >Username</label>
+            <input type="text" placeholder="Enter Username" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter Password" id="password" name="password" required>
+            <div class="button-container">
+                <button type="submit" class="button">Entrar</button>
+                <button type="button" class="button-cancel" onclick="closeForm()">Cancelar</button>
+            </div>
+        </form>
+    </div>
     <h1 id="InicioTitulo">(¿Cuánto queda?)</h1>
     <table id="InicioContador">
         <tr>
@@ -175,5 +193,6 @@
         </a>
     </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
