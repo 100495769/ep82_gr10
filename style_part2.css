@@ -31,7 +31,7 @@
     margin-top: 20px;
 }
 
-.form-container .button, .button-cancel{
+.form-container .button-enter, .button-cancel{
     background-color: #f6d586;
     border-radius: 7px;
     border-color: #a14432;
@@ -43,7 +43,7 @@
     font-size: 1.2vw;
 }
 
-.form-container .button:hover {
+.form-container .button-enter:hover {
     background-color: #e6a31f;
     font-style: italic;
 }
@@ -62,5 +62,5 @@
 }
 
 .popup-form label {
-    margin-left: 2vh; /* Change the value as needed */
+    margin-left: 2vh;
 }
