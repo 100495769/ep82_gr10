@@ -18,10 +18,11 @@
     <a href="home.html#LasCartas">¡Las Cartas!</a>
     <a href="home.html#EnviaTuCarta">Envía tu Carta</a>
     <a href="home.html#Juega">Juega</a>
-    <a onclick="openForm()">Cuenta</a>
+    <div class="menu-buttons" onclick="openSignInForm()">Sign In</div>
+    <div class="menu-buttons">Registrar</div>
 </nav>
     <div class="popup-form" id="popupIniciar">
-        <form action="/action_page.php" class="form-container">
+        <form class="form-container" onsubmit="checkItem()">
             <div class="login-header">Login</div>
 
             <label for="username" >Username</label>
@@ -31,7 +32,7 @@
             <input type="password" placeholder="Enter Password" id="password" name="password" required>
             <div class="button-container">
                 <button type="submit" class="button-enter">Entrar</button>
-                <button type="button" class="button-cancel" onclick="closeForm()">Cancelar</button>
+                <button type="button" class="button-cancel" onclick="closeSignInForm()">Cancelar</button>
             </div>
         </form>
     </div>

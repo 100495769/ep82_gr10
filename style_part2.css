@@ -1,4 +1,23 @@
-/* The popup form - hidden by default */
+
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 10px 0 0;
+    font-family: fontHeader, serif;
+    font-size: 1.5vw;
+    color: #302f2f;
+    background: #f1f1f1;
+    border-radius: 0.25rem 1rem 0.25rem 1rem;
+    width: 6vw;
+}
+
+.menu-buttons:hover {
+    background-color: #f1c275;
+    font-style: italic;
+    box-shadow: 5px 5px #232323;
+}
+
 .popup-form {
     display: none;
     position: fixed;
