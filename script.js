@@ -115,7 +115,7 @@ function hideDropDown() {
 
 function lasCartasPopUp() {
     document.getElementById("LasCartas").style.display = "block";
-    //document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
     hideDropDown();
 }
 
