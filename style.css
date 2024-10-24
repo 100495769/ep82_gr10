@@ -506,6 +506,23 @@ input[type=submit]:hover {
     overflow-wrap: break-word;
     wrap-option: no-wrap;
 }
+
+#Navegacion .dropdown-content a {
+    display: block;
+    text-decoration: none;
+    font-family: fontHeader, serif;
+    font-size: 1.9vw;
+    text-shadow: none;
+    min-width: 12vw;
+    color: black;
+    margin: 2px;
+}
+
+#Navegacion .dropdown a:hover {
+    background-color: #ddd;
+    font-style: italic;
+}
+
 #Navegacion a:hover{
     animation-name: AnimacionLetras;
     animation-duration: 2s;
