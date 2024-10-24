@@ -14,17 +14,17 @@ function closeSignInForm() {
 
 // this part should be actually in the users.json but since we dont have
 // a registration yet, here is a little simulation of filling up the local storage
+// to keep users logged - logic is correct but need a localStorage file
 const users = {
     "users": {
-        "peepoo": "ilovepoop",
-        "poopee": "ilovepoop20"
+        "peepoo": { password: "ilovepoop", loginStatus: false },
+        "poopee": { password: "ilovepoop", loginStatus: false }
     }
 };
 
 const usersString = JSON.stringify(users);
 
 localStorage.setItem("userData", usersString);
-let isLoggedIn = false;
 
 function checkItem() {
     let enteredUsername = document.getElementById("username").value;
@@ -36,16 +36,13 @@ function checkItem() {
         const obj = JSON.parse(userInfo);
 
         if (enteredUsername in obj.users) {
-            if (obj.users[enteredUsername] === enteredPassword) {
+            if (obj.users[enteredUsername].password === enteredPassword) {
                 //window.confirm("You are registered!");
-                isLoggedIn = true;
-                $('#signIn, #registrar').remove();
-                $('#Navegacion').append(`
-                    <a onclick="openSignInForm()">
-                        <img class="login-button"  src="photos/login-icon.png" alt="login icon">
-                    </a>
-                `);
+                obj.users[enteredUsername].loginStatus = true;
+                localStorage.setItem("username", enteredUsername);
+                localStorage.setItem("userData", JSON.stringify(obj));
                 closeSignInForm();
+                isLoggedIn();
             } else {
                 alert("Wrong password!");
                 document.getElementById("password").value = "";
@@ -56,5 +53,60 @@ function checkItem() {
         }
     }
     return false;
+}
+
+function isLoggedIn () {
+    const userInfo = localStorage.getItem("userData");
+    const enteredUsername = localStorage.getItem("username");
+    if (userInfo) {
+        const obj = JSON.parse(userInfo);
+        if (obj.users[enteredUsername].loginStatus === true) {
+            $('#signIn, #registrar').remove();
+            $('#Navegacion').append(`
+            <div class="dropdown" id="drop-down">
+                <img onclick="showDropDown()" class="login-button" src="photos/login-icon.png" alt="login icon" id="log-icon">
+                <div id="showDropDown" class="dropdown-content">
+                    <a id="#profile">Mi Perfil</a>
+                    <a id="#mis-cartas"">Mis cartas</a>
+                    <a id="#log-out" onclick="return confirmLogOut()">Cerrar sesión</a>
+                </div>
+            </div>
+        `);
+        }
+    }
+}
+
+function confirmLogOut() {
+    let result = confirm("Log out?");
+    if (result) {
+        logOut();
+    }
+}
+
+window.onload = function() {
+    isLoggedIn();
+};
+
+function logOut() {
+    const userInfo = localStorage.getItem("userData");
+    if (userInfo) {
+        const obj = JSON.parse(userInfo);
+        const username = localStorage.getItem("username");
+
+        obj.users[username].isLoggedIn = false;
+
+        localStorage.setItem("userData", JSON.stringify(obj));
+
+        $('#log-icon, #drop-down').remove();
+        $('#Navegacion').append(`
+            <div class=" menu-buttons" onclick=" openSignInForm
+        ()" id="signIn">Sign In</div>
+    <div class="menu-buttons" id="registrar" onclick="openRegistrationForm()">Registrar</div>
+        `);
+    }
+}
+
+function showDropDown() {
+    document.getElementById("showDropDown").classList.toggle("show");
 }
 
