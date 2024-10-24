@@ -23,6 +23,7 @@
     justify-content: center;
     align-items: center;
     width: 5vw;
+    padding: 10px;
 }
 
 .dropdown {
@@ -45,7 +46,7 @@
     display: block;
 }
 
-.confirm-exit-button {
+.cartas-exit-button {
     background-color: #f6d586;
     border-radius: 7px;
     border-color: #a14432;
@@ -56,6 +57,26 @@
     font-family: fontHeader, serif;
     font-size: 1.2vw;
 }
+
+.popup-cartas {
+    display: none;
+    position: fixed;
+    align-items: center;
+    top: 7%;
+    left: 20%;
+}
+
+.cartas-container {
+    width: auto;
+    height: auto;
+    margin-left: 1.85vw;
+    margin-right: 1.85vw;
+    margin-top: 7vw;
+    padding-bottom: 30px;
+    background-color: white;
+    border-radius: 20px;
+}
+
 .popup-form {
     display: none;
     position: fixed;
@@ -87,6 +108,27 @@
     align-items: center;
     margin-top: 0.5vw;
     margin-bottom: 0.5vw;
+}
+
+.button-container-cartas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.button-container-cartas .cartas-exit-button {
+    background-color: #f6d586;
+    border-radius: 7px;
+    border-color: #a14432;
+    cursor: pointer;
+    margin: 10px;
+    width: 20%;
+    padding: 10px;
+    font-family: fontHeader, serif;
+    font-size: 1.2vw;
 }
 
 .form-container .button-enter, .button-cancel{

@@ -1,5 +1,3 @@
-
-
 function openSignInForm() {
     document.getElementById("popupIniciar").style.display = "block";
     document.body.style.overflow = "hidden";
@@ -17,7 +15,7 @@ function closeSignInForm() {
 // to keep users logged - logic is correct but need a localStorage file
 const users = {
     "users": {
-        "peepoo": { password: "ilovepoop", loginStatus: false },
+        "peepoo": { password: "ilovepoop", loginStatus: true },
         "poopee": { password: "ilovepoop", loginStatus: false }
     }
 };
@@ -67,7 +65,7 @@ function isLoggedIn () {
                 <img onclick="showDropDown()" class="login-button" src="photos/login-icon.png" alt="login icon" id="log-icon">
                 <div id="showDropDown" class="dropdown-content">
                     <a id="#profile">Mi Perfil</a>
-                    <a id="#mis-cartas"">Mis cartas</a>
+                    <a id="#mis-cartas" onclick="lasCartasPopUp()">Mis cartas</a>
                     <a id="#log-out" onclick="return confirmLogOut()">Cerrar sesión</a>
                 </div>
             </div>
@@ -99,9 +97,9 @@ function logOut() {
 
         $('#log-icon, #drop-down').remove();
         $('#Navegacion').append(`
-            <div class=" menu-buttons" onclick=" openSignInForm
+            <div class="menu-buttons" onclick=" openSignInForm
         ()" id="signIn">Sign In</div>
-    <div class="menu-buttons" id="registrar" onclick="openRegistrationForm()">Registrar</div>
+            <div class="menu-buttons" id="registrar" onclick="openRegistrationForm()">Registrar</div>
         `);
     }
 }
@@ -110,3 +108,18 @@ function showDropDown() {
     document.getElementById("showDropDown").classList.toggle("show");
 }
 
+function hideDropDown() {
+    const dropdown = document.getElementById("showDropDown");
+    dropdown.classList.remove("show");
+}
+
+function lasCartasPopUp() {
+    document.getElementById("LasCartas").style.display = "block";
+    //document.body.style.overflow = "hidden";
+    hideDropDown();
+}
+
+function closeLasCartasPopUp() {
+    document.getElementById("LasCartas").style.display = "none";
+    document.body.style.overflow = "";
+}

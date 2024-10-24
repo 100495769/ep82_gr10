@@ -11,12 +11,11 @@
     <title>Todo sobre Papá Noel</title>
 </head>
 <body>
-
 <section id="Inicio">
 <nav id="Navegacion">
     <a href="home.html#Inicio">Inicio</a>
     <a href="home.html#PapaNoel">Papá Noel</a>
-    <a href="home.html#LasCartas">¡Las Cartas!</a>
+    <!--<a href="home.html#LasCartas">¡Las Cartas!</a>-->
     <a href="home.html#EnviaTuCarta">Envía tu Carta</a>
     <a href="home.html#Juega">Juega</a>
     <div class="menu-buttons" onclick="openSignInForm()" id="signIn">Sign In</div>
@@ -97,47 +96,53 @@
         </div>
     </div>
 </section>
-<section id="LasCartas">
-    <h3 class="headers">(Las Cartas)</h3>
-    <div class="cartas-grind">
-        <div class="carta">
-            <div class="carta-header">Carta 1</div>
-            <div class="carta-text">Anastasiia Sadova
-            Kyiv, Ukraine</div>
-            <img class="carta-photo" src="photos/mr%20kitty.jpg" alt="kitty carta">
+<div class="popup-cartas" id="LasCartas">
+    <div class="cartas-container">
+        <h3 class="headers" style="margin: 5px;">(Las Cartas)</h3>
+        <div class="cartas-grind">
+            <div class="carta">
+                <div class="carta-header">Carta 1</div>
+                <div class="carta-text">Anastasiia Sadova
+                    Kyiv, Ukraine</div>
+                <img class="carta-photo" src="photos/mr%20kitty.jpg" alt="kitty carta">
+            </div>
+            <div class="carta">
+                <div class="carta-header">Carta 2</div>
+                <div class="carta-text">Sergio Cernuda Cueto
+                    Madrid, Spain</div>
+                <img class="carta-photo" src="photos/mr%20kitty.jpg" alt="kitty carta">
+            </div>
+            <div class="carta">
+                <div class="carta-header">Carta 3</div>
+                <div class="carta-text">Nazar Grynko
+                    Kyiv, Ukraine</div>
+                <img class="carta-photo" src="photos/mr%20kitty.jpg" alt="kitty carta">
+            </div>
+            <div class="carta">
+                <div class="carta-header">Carta 4</div>
+                <div class="carta-text">Sofiia Dashevska
+                    Prague, Czech Republic</div>
+                <img class="carta-photo" src="photos/mr%20kitty.jpg" alt="kitty carta">
+            </div>
+            <div class="carta">
+                <div class="carta-header">Carta 5</div>
+                <div class="carta-text">Alejandro Sanchez Vega
+                    Madrid, Spain</div>
+                <img class="carta-photo" src="photos/mr%20kitty.jpg" alt="kitty carta">
+            </div>
+            <div class="carta">
+                <div class="carta-header">Carta 6</div>
+                <div class="carta-text">Ines Guillen
+                    Madrid, Spain</div>
+                <img class="carta-photo" src="photos/mr%20kitty.jpg" alt="kitty carta">
+            </div>
         </div>
-        <div class="carta">
-            <div class="carta-header">Carta 2</div>
-            <div class="carta-text">Sergio Cernuda Cueto
-                Madrid, Spain</div>
-            <img class="carta-photo" src="photos/mr%20kitty.jpg" alt="kitty carta">
-        </div>
-        <div class="carta">
-            <div class="carta-header">Carta 3</div>
-            <div class="carta-text">Nazar Grynko
-                Kyiv, Ukraine</div>
-            <img class="carta-photo" src="photos/mr%20kitty.jpg" alt="kitty carta">
-        </div>
-        <div class="carta">
-            <div class="carta-header">Carta 4</div>
-            <div class="carta-text">Sofiia Dashevska
-            Prague, Czech Republic</div>
-            <img class="carta-photo" src="photos/mr%20kitty.jpg" alt="kitty carta">
-        </div>
-        <div class="carta">
-            <div class="carta-header">Carta 5</div>
-            <div class="carta-text">Alejandro Sanchez Vega
-                Madrid, Spain</div>
-            <img class="carta-photo" src="photos/mr%20kitty.jpg" alt="kitty carta">
-        </div>
-        <div class="carta">
-            <div class="carta-header">Carta 6</div>
-            <div class="carta-text">Ines Guillen
-            Madrid, Spain</div>
-            <img class="carta-photo" src="photos/mr%20kitty.jpg" alt="kitty carta">
+        <div class="button-container-cartas" id="ButtonCartas">
+            <button class="cartas-exit-button" onclick="closeLasCartasPopUp()">Close</button>
         </div>
     </div>
-</section>
+
+</div>
 <section id="EnviaTuCarta">
     <h4 class="headers">(Envía Tu Carta)</h4>
     <div class="forma">

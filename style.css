@@ -128,24 +128,24 @@ html, body {
 
 /*carts*/
 #LasCartas {
-    width: 100%;
-    min-height: 90vh;
+    width: 60%;
     height: auto;
     overflow: auto;
+    align-items: center;
 }
 
 .cartas-grind {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 5vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    grid-row-gap: 3vh;
+    margin-left: 2vw;
+    margin-right: 1vw;
 }
 
 .carta {
-    width: 28vw;
-    height: 20vw;
-    border: 0.4vmin dashed darkred;
+    width: 16vw;
+    height: 12vw;
+    border: 0.2vmin dashed darkred;
     background: rgba(205, 92, 92, 0.8);
     border-radius: 3vmin;
     position: relative;
@@ -153,27 +153,28 @@ html, body {
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
-    padding: 2vw;
+    padding: 1vw;
 }
 
 .carta-header{
     text-align: left;
-    font-size: 2.5vw;
+    font-size: 1.25vw;
     font-family: fontHeader, serif;
 }
 
 .carta-text {
     white-space: pre-line;
+    font-size: 1vw;
 }
 
 .carta-photo {
-    width: 11.7vw;
-    height: 11.7vw;
+    width: 5.85vw;
+    height: 5.85vw;
     border-radius: 1vmin;
     object-fit: cover;
     position: absolute; /*pq tenemos carta y su posición, y foto es su objeto*/
     top: 40%;
-    right: 2vw;
+    right: 1vw;
     transform: translate(0%, -50%);
 }
 
