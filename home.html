@@ -7,6 +7,7 @@
     <link href="style_part2.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Todo sobre Papá Noel</title>
 </head>
 <body>
@@ -18,11 +19,11 @@
     <a href="home.html#LasCartas">¡Las Cartas!</a>
     <a href="home.html#EnviaTuCarta">Envía tu Carta</a>
     <a href="home.html#Juega">Juega</a>
-    <div class="menu-buttons" onclick="openSignInForm()">Sign In</div>
-    <div class="menu-buttons">Registrar</div>
+    <div class="menu-buttons" onclick="openSignInForm()" id="signIn">Sign In</div>
+    <div class="menu-buttons" id="registrar">Registrar</div>
 </nav>
     <div class="popup-form" id="popupIniciar">
-        <form class="form-container" onsubmit="checkItem()">
+        <form class="form-container" onsubmit="return checkItem()">
             <div class="login-header">Login</div>
 
             <label for="username" >Username</label>
@@ -194,6 +195,6 @@
         </a>
     </div>
 </footer>
-<script src="script.js"></script>
+<script src="script.js" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
 </body>
 </html>

@@ -18,6 +18,12 @@
     box-shadow: 5px 5px #232323;
 }
 
+.login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5vw;
+}
 .popup-form {
     display: none;
     position: fixed;
